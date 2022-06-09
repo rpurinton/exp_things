@@ -13,8 +13,6 @@ if(isset($_POST["submit"]))
 	$_SESSION["pct"] = $_POST["pct"];
 	$_SESSION["records"][] = $record;
 }
-if(isset($_SESSION["level"])) $level = $_SESSION["level"];
-else $level = 1;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -64,6 +62,8 @@ else $level = 1;
                     <td>
                         <select name="level">
 <?php
+if(isset($_SESSION["level"])) $level = $_SESSION["level"];
+else $level = 1;
 for($i=1;$i<192;$i++)
 {
 	if($i == $level) echo("                        <option value=\"$i\" selected=\"selected\">$i</option>\n");

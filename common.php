@@ -1,6 +1,6 @@
 <?php
 $ticker = false;
-$levels = json_decode(file_get_contents("levels.json"),true);
+$levels = json_decode(file_get_contents(__DIR__."/levels.json"),true);
 
 function getClass()
 {
@@ -61,4 +61,12 @@ function timeHuman($input)
 
 function round_up($int, $n) {
     return ceil($int / $n) * $n;
+}
+
+function minsec($seconds)
+{
+	$minutes = floor($seconds/60);
+	$seconds = $seconds % 60;
+	if($minutes) return ("$minutes m $seconds");
+	return ($seconds);
 }

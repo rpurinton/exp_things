@@ -1,5 +1,5 @@
 <?php
-require_once("common.php");
+require_once("../common.php");
 $sql = mysqli_connect("127.0.0.1","exp","exp","exp");
 if(isset($_POST["submit"]))
 {

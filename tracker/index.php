@@ -1,6 +1,6 @@
 <?php
 require_once("../common.php");
-$sql = mysqli_connect("127.0.0.1","exp","exp","exp");
+$sql = mysqli_connect("127.0.0.1","mir4","mir4","mir4");
 if(isset($_POST["submit"]))
 {
 	extract($_POST);
